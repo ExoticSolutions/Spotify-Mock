@@ -1,0 +1,55 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/chevron-left.css");
+@font-face {
+  font-family: Franie;
+  src: url(../public/Franie.otf);
+}
+#tab-arrows {
+}
+#tab-stlye {
+}
+#side-nav-bar {
+  list-style: none;
+}
+
+#side-nav-links {
+  text-decoration: none;
+  list-style: none;
+  font-weight: 100;
+  font-family: Franie;
+  font-size: x-small;
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+#style-nav-icon {
+  max-width: 5%;
+}
+#sign-up {
+  font: Franie;
+  font-weight: 500;
+  font-weight: it;
+  background-color: rgb(11, 11, 11);
+}
+
+#style-profile-img {
+  max-width: 6%;
+}
+
+#style-greeting {
+  font-family: Franie;
+  color: whitesmoke;
+  font-size: x-small;
+  font: italic;
+}
+
+.style-library-head {
+  font-family: Franie;
+  color: whitesmoke;
+  font: italic;
+  font-size: 12px;
+}
+
+#top-picks-header {
+  font-size: 20px;
+  font-family: Franie;
+}

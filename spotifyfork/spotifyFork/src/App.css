@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Franie;
+  src: url(../public/Franie.otf);
+}
+#main {
+  background-color: #121212;
+}
+
+#style-side-row {
+  background-color: #121212;
+}
