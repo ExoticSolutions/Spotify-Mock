@@ -74,6 +74,7 @@ function Library() {
     {
       /fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
     }
+    finalFeatured.push(featured);
     console.log(finalFeatured);
     return finalFeatured;
   }
