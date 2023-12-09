@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
-/fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
+//fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
 
 import "../index.css";
 function Library() {
@@ -72,7 +72,8 @@ function Library() {
         console.log(error);
       });
     {
-      /fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
+      //fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
+      //to see the response data after theis bracket type console.log(featured)
     }
     finalFeatured.push(featured);
     console.log(finalFeatured);
