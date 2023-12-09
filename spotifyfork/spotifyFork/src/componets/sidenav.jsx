@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { Button } from "bootstrap";
 function Sidenav() {
   let status = true;
   return (
