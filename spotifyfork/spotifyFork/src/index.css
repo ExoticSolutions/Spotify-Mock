@@ -53,3 +53,7 @@
   font-size: 20px;
   font-family: Franie;
 }
+
+#style-playlist-img {
+  max-width: 100%;
+}

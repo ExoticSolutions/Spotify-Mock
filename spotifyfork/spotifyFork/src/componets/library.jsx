@@ -1,5 +1,9 @@
 import React from "react";
 import axios from "axios";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
+/fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
+
 import "../index.css";
 function Library() {
   function Checkstatus(props) {
@@ -13,7 +17,7 @@ function Library() {
             <div className="">
               <br />
               <div className="style-library-head ms-5">
-                <div className="d-flex justify-center gap-3 mb-2">
+                <div className="d-flex justify-center gap-3 mb-2 border bg-success">
                   {getSongs(fName)}
                 </div>
               </div>
@@ -29,38 +33,49 @@ function Library() {
   }
 
   function getSongs(fName) {
-    console.log("Success");
-    let songData = getSongData();
-    return (
+    let featuredPlaylists = getFeatured();
+    const button = (
       <div>
         <p>Spotify Playlist</p>
         <h1 id="top-picks-header"> Top picks for {fName}</h1>
-        <div>
-          {songData.map((userSong) => (
-            <div key={userSong}></div>
-          ))}
+        <div className="">
+          <Row>
+            {featuredPlaylists.map((featuredPlaylist, index) => (
+              <Col key={index}>
+                <img src={featuredPlaylist} alt="" id="style-playlist-img" />
+              </Col>
+            ))}
+          </Row>
         </div>
       </div>
     );
+    return button;
   }
 
-  function getSongData() {
-    const APIKEY = "6941e6b476ff473a9761c76fe3fe80e7";
-    axios
+  function getFeatured() {
+    let featured = [];
+    let finalFeatured = [{}];
+    const APIKEY =
+      "Bearer BQCBZmFxK_1bw_-JjdgYWcBj0A0E1t-PW_u9LBFg2uuz9zkm5f9BYRVb-cB5nnKyupUGetgXWcCtxDsnooUT-SfXJgbe9XF1B52UaQTpCzAH35zS77o";
 
-      .get(
-        "https://accounts.spotify.com/authorize?" + APIKEY + "/recommendation",
-        {
-          headers: {},
-        }
-      )
+    axios
+      .get("https://api.spotify.com/v1/browse/featured-playlists", {
+        headers: {
+          Authorization: APIKEY,
+        },
+      })
       .then(function (response) {
-        console.log(response);
+        featured.push(response.data.playlists.items);
+        console.log();
       })
       .catch(function (error) {
         console.log(error);
       });
-    return ["1"];
+    {
+      /fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
+    }
+    console.log(finalFeatured);
+    return finalFeatured;
   }
 
   return (
