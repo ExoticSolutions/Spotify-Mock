@@ -6,86 +6,42 @@ import Col from "react-bootstrap/esm/Col";
 
 import "../index.css";
 function Library() {
-  function Checkstatus(props) {
-    const fName = "Dan";
-    let content;
-    let loggedIn = props.isLoggedIn;
+  function GetPlaylistLibrary(props) {
+    const status = props.isLoggedIn;
+
+    const name = props.fName;
+    let button;
 
     {
-      loggedIn
-        ? (content = (
-            <div className="">
-              <br />
-              <div className="style-library-head ms-5">
-                <div className="d-flex justify-center gap-3 mb-2 border bg-success">
-                  {getSongs(fName)}
-                </div>
-              </div>
+      status
+        ? (button = (
+            <div>
+              Top picks for {name}
+              <div>{displayFeaturedPlaylists()}</div>
             </div>
           ))
-        : (content = <div className="align-center">{getError()}</div>);
+        : (button = <p>Error sign up</p>);
     }
-    return content;
-  }
-
-  function getError() {
-    return <h1>Signup to access library</h1>;
-  }
-
-  function getSongs(fName) {
-    let featuredPlaylists = getFeatured();
-    const button = (
-      <div>
-        <p>Spotify Playlist</p>
-        <h1 id="top-picks-header"> Top picks for {fName}</h1>
-        <div className="">
-          <Row>
-            {featuredPlaylists.map((featuredPlaylist, index) => (
-              <Col key={index}>
-                <img src={featuredPlaylist} alt="" id="style-playlist-img" />
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </div>
-    );
     return button;
   }
 
-  function getFeatured() {
-    let featured = [];
-    let finalFeatured = [{}];
-    const APIKEY =
-      "Bearer BQCBZmFxK_1bw_-JjdgYWcBj0A0E1t-PW_u9LBFg2uuz9zkm5f9BYRVb-cB5nnKyupUGetgXWcCtxDsnooUT-SfXJgbe9XF1B52UaQTpCzAH35zS77o";
-
-    axios
-      .get("https://api.spotify.com/v1/browse/featured-playlists", {
-        headers: {
-          Authorization: APIKEY,
-        },
-      })
-      .then(function (response) {
-        featured.push(response.data.playlists.items);
-        console.log();
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    {
-      //fix this part for importing the random playlist to get a new key cu the api is timed go on postmayn*/;
-      //to see the response data after theis bracket type console.log(featured)
-    }
-    finalFeatured.push(featured);
-    console.log(finalFeatured);
-    return finalFeatured;
+  function displayFeaturedPlaylists() {
+    return (
+      <div className="text-center">
+        <p>Top playlists this week</p>
+        {getData()}
+      </div>
+    );
   }
+
+  function getData() {}
 
   return (
     <div
-      className=" mt-3 border border-black shadow-lg rounded"
+      className=" mt-3 border border-success shadow-lg rounded"
       id="top-library-header"
     >
-      <Checkstatus isLoggedIn={true} />
+      <GetPlaylistLibrary isLoggedIn={true} fName={"Dan"} />
     </div>
   );
 }
