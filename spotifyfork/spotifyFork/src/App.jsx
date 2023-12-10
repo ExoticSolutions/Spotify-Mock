@@ -5,8 +5,8 @@ import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Personalizedtab from "./componets/personalizedtab";
 import Library from "./componets/library";
+import Maincontent from "./componets/maincontent";
 
 function App() {
   return (
@@ -18,12 +18,12 @@ function App() {
             <Library />
           </Col>
           <Col>
-            <Row className="d-flex flex-column">
-              <Personalizedtab />
+            <Row className="mt-5">
+              <Maincontent />
             </Row>
-            <Row></Row>
           </Col>
         </Row>
+        <br />
       </div>
     </>
   );

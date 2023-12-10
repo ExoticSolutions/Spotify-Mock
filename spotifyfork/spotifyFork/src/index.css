@@ -17,7 +17,7 @@
   font-weight: 100;
   font-family: Franie;
   font-size: x-small;
-  color: #b3b3b3;
+  color: rgb(233, 231, 231);
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@
   font: italic;
 }
 
-.style-library-head {
+#style-library-head {
   font-family: Franie;
   color: whitesmoke;
   font: italic;
@@ -50,10 +50,110 @@
 }
 
 #top-picks-header {
-  font-size: 20px;
+  font-size: 17px;
   font-family: Franie;
+  color: rgb(213, 210, 210);
+  font-style: italic;
+}
+#top-picks-head {
+  font-size: 40px;
+  font-family: Franie;
+  color: rgb(228, 228, 228);
+  font-style: italic;
+}
+.style-playlists {
+  border: 2px solid rgb(22, 22, 22);
+}
+#scroll-playlist {
+  max-height: 300px;
+  overflow-y: auto;
+
+  border: 1px solid transparent;
+  margin: 20px;
 }
 
-#style-playlist-img {
+#style-playlist-card {
+  background-color: #171717;
+}
+
+#style-playlist-title {
+  font-family: Franie;
+  color: whitesmoke;
+  font-size: 12px;
+  text-decoration: none;
+}
+#style-playlist-subtext {
+  font-family: Franie;
+  color: whitesmoke;
+  font-size: x-small;
+  max-width: 85%;
+}
+#main-content-tabs {
+  font-size: small;
+  text-decoration-style: none;
+  font: italic;
+  background-color: #0f0e0e;
+
+  font-family: Franie;
+  color: whitesmoke;
+}
+
+#style-tab-links {
+  font-size: small;
+  text-decoration-style: none;
+  font: italic;
+  background-color: #0f0e0e;
+
+  font-family: Franie;
+  color: whitesmoke;
+}
+
+#style-album-artist {
+  font-family: Franie;
+  color: rgb(227, 226, 226);
+  font-size: 13px;
+  text-decoration: none;
+}
+#style-album-name {
+  font-family: Franie;
+  color: rgb(227, 226, 226);
+  font-size: x-small;
+  text-decoration: none;
+}
+#style-album-card-tab {
+  background-color: #171717;
+}
+
+#style-album-cover {
   max-width: 100%;
+}
+
+#style-album-tab {
+  border: 2px solid rgb(22, 22, 22);
+  max-width: 800px;
+  max-height: 710px;
+  overflow: scroll;
+  background-color: #121212;
+}
+
+#new-albums-title {
+  font-family: Franie;
+  color: rgb(227, 226, 226);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#style-link-album {
+  text-decoration: none;
+}
+
+.register-button {
+  background-color: green;
+  text-decoration: none;
+  font-family: Franie;
+  color: whitesmoke;
+}
+
+#register-content {
+  background-color: #121212;
 }
